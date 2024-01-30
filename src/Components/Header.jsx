@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Header() {
   return (
@@ -23,9 +24,15 @@ function Header() {
         <li className="nav-item dropdown">
           <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Student Data</a>
           <div className="dropdown-menu">
-            <a className="dropdown-item" href="/register">Registration</a>
+            {/* <a className="dropdown-item" href="/register">Registration</a> */}
+            <div className="dropdown-item">
+            <Link to="/register" className="text-decoration-none text-light" >Registration</Link>
+            </div>
             <div className="dropdown-divider"></div>
-            <a className="dropdown-item" href="/students">Profile Search</a>
+            <div className="dropdown-item">
+            <Link to="/students" className="text-decoration-none text-light" >Profile Search</Link>
+            </div>
+            {/* <a className="dropdown-item" href="/students">Profile Search</a> */}
             
           </div>
         </li>
