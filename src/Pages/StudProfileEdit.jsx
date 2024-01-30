@@ -102,7 +102,7 @@ function StudProfileEdit(id) {
                                 type="text"
                                 placeholder="First name"
                                 
-                             value={localStorage.getItem('fname')}
+                             defaultValue={localStorage.getItem('fname')}
                                 onChange={e => setStudProfile({ ...studProfile, fname: e.target.value })}
                             />
                             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
@@ -113,7 +113,7 @@ function StudProfileEdit(id) {
                                 required
                                 type="text"
                                 placeholder="Last name"
-                                value={localStorage.getItem('lname')}
+                                defaultValue={localStorage.getItem('lname')}
                                 onChange={e => setStudProfile({ ...studProfile, lname: e.target.value })}
                             />
                             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
@@ -127,7 +127,7 @@ function StudProfileEdit(id) {
                                     placeholder="Username"
                                     aria-describedby="inputGroupPrepend"
                                     required
-                                    value={localStorage.getItem('uname')}
+                                    defaultValue={localStorage.getItem('uname')}
                                     onChange={e => setStudProfile({ ...studProfile, uname: e.target.value })}
                                 />
                                 <Form.Control.Feedback type="invalid">
@@ -143,7 +143,7 @@ function StudProfileEdit(id) {
                             required
                             type="text"
                             placeholder=""
-                            value={localStorage.getItem('addr1')}
+                            defaultValue={localStorage.getItem('addr1')}
                             onChange={e => setStudProfile({ ...studProfile, addr1: e.target.value })}
                         />
                         <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
@@ -153,7 +153,7 @@ function StudProfileEdit(id) {
                         <Form.Control
                             type="text"
                             placeholder="(optional)"
-                            value={localStorage.getItem('addr2')}
+                            defaultValue={localStorage.getItem('addr2')}
                             onChange={e => setStudProfile({ ...studProfile, addr2: e.target.value })}
                         />
                         <Form.Control.Feedback></Form.Control.Feedback>
@@ -163,21 +163,21 @@ function StudProfileEdit(id) {
                     <Row className="mb-3">
                         <Form.Group as={Col} md="6" controlId="validationCustom03">
                             <Form.Label>City</Form.Label>
-                            <Form.Control type="text" value={localStorage.getItem('city')} placeholder="City" required onChange={e => setStudProfile({ ...studProfile, city: e.target.value })} />
+                            <Form.Control type="text" defaultValue={localStorage.getItem('city')} placeholder="City" required onChange={e => setStudProfile({ ...studProfile, city: e.target.value })} />
                             <Form.Control.Feedback type="invalid">
                                 Please provide a valid city.
                             </Form.Control.Feedback>
                         </Form.Group>
                         <Form.Group as={Col} md="3" controlId="validationCustom04">
                             <Form.Label>State</Form.Label>
-                            <Form.Control type="text" value={localStorage.getItem('state')} placeholder="State" required onChange={e => setStudProfile({ ...studProfile, state: e.target.value })} />
+                            <Form.Control type="text" defaultValue={localStorage.getItem('state')} placeholder="State" required onChange={e => setStudProfile({ ...studProfile, state: e.target.value })} />
                             <Form.Control.Feedback type="invalid">
                                 Please provide a valid state.
                             </Form.Control.Feedback>
                         </Form.Group>
                         <Form.Group as={Col} md="3" controlId="validationCustom05">
                             <Form.Label>Zip</Form.Label>
-                            <Form.Control type="text" value={localStorage.getItem('zip')} placeholder="Zip" required onChange={e => setStudProfile({ ...studProfile, zip: e.target.value })} />
+                            <Form.Control type="text" defaultValue={localStorage.getItem('zip')} placeholder="Zip" required onChange={e => setStudProfile({ ...studProfile, zip: e.target.value })} />
                             <Form.Control.Feedback type="invalid">
                                 Please provide a valid zip.
                             </Form.Control.Feedback>

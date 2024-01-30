@@ -7,7 +7,7 @@ function Header() {
     <nav className="navbar navbar-expand-lg bg-primary" data-bs-theme="dark" >
   <div className="container-fluid">
     <a className="navbar-brand" href="/dash">
-<img id='logo' src="src\assets\logo.png" alt="" style={{width:'160px'}}/>
+<img id='logo' src="public\logo.png" alt="" style={{width:'160px'}}/>
 
     </a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,9 +16,9 @@ function Header() {
     <div className="collapse navbar-collapse" id="navbarColor01">
       <ul className="navbar-nav ms-auto " style={{float:'right'}}>
         <li className="nav-item">
-          <a className="nav-link active" href="/dash">Home
+          <Link className="nav-link active" to="/dash">Home
             <span className="visually-hidden">(current)</span>
-          </a>
+          </Link>
         </li>
         
         <li className="nav-item dropdown">

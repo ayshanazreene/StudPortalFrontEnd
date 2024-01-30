@@ -19,7 +19,7 @@ function StudReg() {
 
   useEffect(() => {
     setStudProfile({ ...studProfile, appStatus: "Registrationcomplete" })
-
+    
   }, [validated]);
 
   const handleSubmit = async (event) => {
@@ -31,9 +31,11 @@ function StudReg() {
 
     event.preventDefault();
     setValidated(true);
+    
     console.log(studProfile);
    const result= await uploadNewStudProfileAPI(studProfile);
    console.log(result);
+   alert("Registration Complete")
   };
 
   const handleClear = (event) => {
